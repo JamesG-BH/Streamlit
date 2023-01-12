@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sktime.forecasting.exp_smoothing import ExponentialSmoothing
-from sktime.forecasting.model_selection import temporal_train_test_split
-from sktime.metrics.forecasting import smape_loss
+# from sktime.forecasting.exp_smoothing import ExponentialSmoothing
+# from sktime.forecasting.model_selection import temporal_train_test_split
+# from sktime.metrics.forecasting import smape_loss
 import matplotlib.pyplot as plt
 
 st.markdown("# Page 2 ❄️")
@@ -41,13 +41,13 @@ st.header('Temperature Histogram')
 temp = filtered_data[temp_sensor]
 st.hist(temp, bins=20, range=[temp.min(), temp.max()])
 
-#Forecast Temperature
-st.header('Forecast Temperature')
-y = filtered_data[temp_sensor]
-X_train, X_test, y_train, y_test = temporal_train_test_split(X=filtered_data, y=y, test_size=0.2)
-forecaster = ExponentialSmoothing(trend='add', seasonal='multiplicative')
-forecaster.fit(y_train)
-y_pred = forecaster.predict(fh=len(y_test))
+# #Forecast Temperature
+# st.header('Forecast Temperature')
+# y = filtered_data[temp_sensor]
+# X_train, X_test, y_train, y_test = temporal_train_test_split(X=filtered_data, y=y, test_size=0.2)
+# forecaster = ExponentialSmoothing(trend='add', seasonal='multiplicative')
+# forecaster.fit(y_train)
+# y_pred = forecaster.predict(fh=len(y_test))
 
-# Plot forecasted temperature
-st.line_chart(pd.DataFrame({'date': X_test['date'], 'temp': y_test, 'temp_forecast': y_pred}))
+# # Plot forecasted temperature
+# st.line_chart(pd.DataFrame({'date': X_test['date'], 'temp': y_test, 'temp_forecast': y_pred}))
