@@ -9,5 +9,3 @@ st.markdown("# A Random Table 🎉")
 st.sidebar.markdown("# Main page 🎈")
 
 df
-
-streamlit run https://github.com/JamesG-BH/Streamlit/blob/main/Sample_app_pages/Sample_app.py
