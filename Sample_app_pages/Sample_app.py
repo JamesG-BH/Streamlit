@@ -6,5 +6,6 @@ df = pd.DataFrame({
 })
 
 st.markdown("# A Random Table 🎉")
+st.sidebar.markdown("# Main page 🎈")
 
 df
