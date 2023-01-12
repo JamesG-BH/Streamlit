@@ -4,7 +4,7 @@ import numpy as np
 # from sktime.forecasting.exp_smoothing import ExponentialSmoothing
 # from sktime.forecasting.model_selection import temporal_train_test_split
 # from sktime.metrics.forecasting import smape_loss
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 st.markdown("# Page 2 ❄️")
 st.sidebar.markdown("# Page 2 ❄️")
